@@ -7,15 +7,15 @@ import (
 	"regexp"
 	"testing"
 
-	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config"
+	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/resourceassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/model"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/helpers/random"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testdatatypes"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/resourceassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/model"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/helpers/random"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testdatatypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/tfversion"
@@ -164,7 +164,7 @@ func TestAcc_DynamicTable_basic(t *testing.T) {
 	})
 }
 
-// TestAcc_DynamicTable_issue2173 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2173 issue.
+// TestAcc_DynamicTable_issue2173 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2173 issue.
 func TestAcc_DynamicTable_issue2173(t *testing.T) {
 	dynamicTableId := testClient().Ids.RandomSchemaObjectIdentifier()
 	dynamicTableName := dynamicTableId.Name()
@@ -240,7 +240,7 @@ func TestAcc_DynamicTable_issue2173(t *testing.T) {
 	})
 }
 
-// TestAcc_DynamicTable_issue2134 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2134 issue.
+// TestAcc_DynamicTable_issue2134 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2134 issue.
 func TestAcc_DynamicTable_issue2134(t *testing.T) {
 	dynamicTableId := testClient().Ids.RandomSchemaObjectIdentifier()
 	dynamicTableName := dynamicTableId.Name()
@@ -304,7 +304,7 @@ func TestAcc_DynamicTable_issue2134(t *testing.T) {
 	})
 }
 
-// TestAcc_DynamicTable_issue2276 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2276 issue.
+// TestAcc_DynamicTable_issue2276 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2276 issue.
 func TestAcc_DynamicTable_issue2276(t *testing.T) {
 	dynamicTableId := testClient().Ids.RandomSchemaObjectIdentifier()
 	dynamicTableName := dynamicTableId.Name()
@@ -354,7 +354,7 @@ func TestAcc_DynamicTable_issue2276(t *testing.T) {
 	})
 }
 
-// TestAcc_DynamicTable_issue2329 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2329 issue.
+// TestAcc_DynamicTable_issue2329 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2329 issue.
 func TestAcc_DynamicTable_issue2329(t *testing.T) {
 	dynamicTableId := testClient().Ids.RandomSchemaObjectIdentifierContaining("AS")
 	dynamicTableName := dynamicTableId.Name()
@@ -401,7 +401,7 @@ func TestAcc_DynamicTable_issue2329(t *testing.T) {
 	})
 }
 
-// TestAcc_DynamicTable_issue2329_with_matching_comment proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2329 issue.
+// TestAcc_DynamicTable_issue2329_with_matching_comment proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2329 issue.
 func TestAcc_DynamicTable_issue2329_with_matching_comment(t *testing.T) {
 	dynamicTableId := testClient().Ids.RandomSchemaObjectIdentifierContaining("AS")
 	dynamicTableName := dynamicTableId.Name()

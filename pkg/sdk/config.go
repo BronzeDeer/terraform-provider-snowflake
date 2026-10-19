@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/oswrapper"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/oswrapper"
 	"github.com/pelletier/go-toml/v2"
 	"github.com/snowflakedb/gosnowflake/v2"
 	"github.com/youmark/pkcs8"

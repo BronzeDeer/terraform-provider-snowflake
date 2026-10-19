@@ -84,7 +84,7 @@ func TestUnsetObjectParameterNetworkPolicyOnUser(t *testing.T) {
 	})
 }
 
-// Proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/3344 is fixed.
+// Proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/3344 is fixed.
 func TestSetAccountParameterEnforceNetworkRulesForInternalStages(t *testing.T) {
 	opts := &AlterAccountOptions{
 		Set: &AccountSet{

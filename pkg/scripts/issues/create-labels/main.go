@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/issues"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/issues"
 )
 
 func main() {

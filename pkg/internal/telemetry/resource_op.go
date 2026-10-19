@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/internal/tracking"
-	internalprovider "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/internal/tracking"
+	internalprovider "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 )
 

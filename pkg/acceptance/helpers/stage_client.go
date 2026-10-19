@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/ids"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testfiles"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/util"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/ids"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testfiles"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/util"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/stretchr/testify/require"
 )
 

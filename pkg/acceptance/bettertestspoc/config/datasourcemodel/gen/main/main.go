@@ -3,10 +3,10 @@
 package main
 
 import (
-	resourcemodelgen "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/model/gen"
+	resourcemodelgen "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/model/gen"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/datasourcemodel/gen"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/datasourcemodel/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 const (
@@ -18,8 +18,8 @@ func main() {
 	genhelpers.NewGenerator(
 		genhelpers.NewPreambleModel(name, version).
 			WithImport("encoding/json").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/datasources").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/datasources").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config").
 			WithNamedImport("tfconfig", "github.com/hashicorp/terraform-plugin-testing/config"),
 		gen.GetDatasourceSchemaDetails,
 		resourcemodelgen.ModelFromResourceSchemaDetails,

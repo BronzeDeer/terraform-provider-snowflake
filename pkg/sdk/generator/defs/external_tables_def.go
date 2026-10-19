@@ -1,9 +1,9 @@
 package defs
 
 import (
-	g "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
+	g "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
 )
 
 var (
@@ -95,7 +95,7 @@ func externalTableColumn() *g.QueryStruct {
 func withExternalTableFileFormats(qs *g.QueryStruct) *g.QueryStruct {
 	return qs.
 		OptionalQueryStructField("FileFormat", externalTableFileFormat(), g.ListOptions().Parentheses().NoComma().SQL("FILE_FORMAT =")).
-		// RawFileFormat was introduced, because of the decision taken during https://github.com/Snowflake-Labs/terraform-provider-snowflake/pull/2228
+		// RawFileFormat was introduced, because of the decision taken during https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pull/2228
 		// that for now the snowflake_external_table resource should continue on using raw file format, which wasn't previously supported by the new SDK.
 		// In the future it should most likely be replaced by a more structured version FileFormat
 		OptionalQueryStructField("RawFileFormat", rawFileFormat(), g.ListOptions().Parentheses().SQL("FILE_FORMAT ="))

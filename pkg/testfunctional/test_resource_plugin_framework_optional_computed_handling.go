@@ -3,9 +3,9 @@ package testfunctional
 import (
 	"context"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/common"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/tmpplanmodifiers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/common"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/tmpplanmodifiers"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"

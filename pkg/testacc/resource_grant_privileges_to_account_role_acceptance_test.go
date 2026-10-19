@@ -10,17 +10,17 @@ import (
 	"strings"
 	"testing"
 
-	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config"
+	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config"
 	tfjson "github.com/hashicorp/terraform-json"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/customassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/resourceassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/model"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/providermodel"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/planchecks"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/customassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/resourceassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/model"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/providermodel"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/planchecks"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/config"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/knownvalue"
@@ -623,7 +623,7 @@ func TestAcc_GrantPrivilegesToAccountRole_OnAccountObject_PostgresInstance(t *te
 }
 
 // This proves that infinite plan is not produced as in snowflake_grant_privileges_to_role.
-// More details can be found in the fix pr https://github.com/Snowflake-Labs/terraform-provider-snowflake/pull/2364.
+// More details can be found in the fix pr https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pull/2364.
 func TestAcc_GrantPrivilegesToApplicationRole_OnAccountObject_InfinitePlan(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2205,7 +2205,7 @@ func TestAcc_GrantPrivilegesToAccountRole_Inherited_Validation_MissingExperiment
 	})
 }
 
-// prove https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2803 is fixed
+// prove https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2803 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_ImportedPrivileges_issue2803(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2299,7 +2299,7 @@ resource "snowflake_grant_privileges_to_account_role" "test" {
 `
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1998 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1998 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_ImportedPrivilegesOnSnowflakeDatabase(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2382,7 +2382,7 @@ func TestAcc_GrantPrivilegesToAccountRole_MultiplePartsInRoleName(t *testing.T) 
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2533 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2533 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_OnExternalVolume(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2459,7 +2459,7 @@ func TestAcc_GrantPrivilegesToAccountRole_OnConnection(t *testing.T) {
 	})
 }
 
-// proved https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2651
+// proved https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2651
 func TestAcc_GrantPrivilegesToAccountRole_MLPrivileges(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2508,7 +2508,7 @@ func TestAcc_GrantPrivilegesToAccountRole_MLPrivileges(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2459 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2459 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_CompleteUseCase_ReconcileExternalWithGrantOption(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2565,7 +2565,7 @@ func TestAcc_GrantPrivilegesToAccountRole_CompleteUseCase_ReconcileExternalWithG
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2459 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2459 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_ChangeWithGrantOptionsOutsideOfTerraform_WithoutGrantOptions(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2637,7 +2637,7 @@ func revokeAndGrantPrivilegesOnTableToAccountRole(
 	client.Grant.GrantPrivilegesOnSchemaObjectToAccountRole(t, accountRoleId, sdk.ObjectTypeTable, tableName, privileges, withGrantOption)
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2621 doesn't apply to this resource
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2621 doesn't apply to this resource
 func TestAcc_GrantPrivilegesToAccountRole_RemoveGrantedObjectOutsideTerraform(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2679,7 +2679,7 @@ func TestAcc_GrantPrivilegesToAccountRole_RemoveGrantedObjectOutsideTerraform(t 
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2621 doesn't apply to this resource
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2621 doesn't apply to this resource
 func TestAcc_GrantPrivilegesToAccountRole_RemoveAccountRoleOutsideTerraform(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2718,7 +2718,7 @@ func TestAcc_GrantPrivilegesToAccountRole_RemoveAccountRoleOutsideTerraform(t *t
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2689 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2689 is fixed
 func TestAcc_GrantPrivilegesToAccountRole_AlwaysApply_SetAfterCreate(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2894,7 +2894,7 @@ func TestAcc_GrantPrivilegesToAccountRole_IdentifierQuotingDiffSuppression(t *te
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2807
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2807
 func TestAcc_GrantPrivilegesToAccountRole_OnDataset_issue2807(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)
@@ -2945,7 +2945,7 @@ func TestAcc_GrantPrivilegesToAccountRole_OnDataset_issue2807(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/3050
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/3050
 func TestAcc_GrantPrivilegesToAccountRole_OnFutureModels_issue3050(t *testing.T) {
 	role, roleCleanup := testClient().Role.CreateRole(t)
 	t.Cleanup(roleCleanup)

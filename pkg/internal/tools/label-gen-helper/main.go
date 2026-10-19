@@ -16,7 +16,7 @@ import (
 	"github.com/goccy/go-yaml"
 	"github.com/goccy/go-yaml/parser"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider"
 )
 
 // This generator keeps the GitHub labels in sync with the resources and data sources

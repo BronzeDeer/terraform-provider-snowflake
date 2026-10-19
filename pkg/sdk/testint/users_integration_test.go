@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/objectassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/objectparametersassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/helpers/random"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testvars"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/objectassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/objectparametersassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/helpers/random"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testvars"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -2133,7 +2133,7 @@ func TestInt_Users(t *testing.T) {
 		assert.Equal(t, 1, len(users))
 	})
 
-	// This test proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2817.
+	// This test proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2817.
 	// sql: Scan error on column index 10, name "disabled": sql/driver: couldn't convert "null" into type bool
 	t.Run("issue #2817: handle show properly without OWNERSHIP and MANAGE GRANTS", func(t *testing.T) {
 		disabledUser, disabledUserCleanup := testClientHelper().User.CreateUserWithRequest(t, sdk.NewCreateUserRequest(testClientHelper().Ids.RandomAccountObjectIdentifier()).WithObjectProperties(*sdk.NewUserObjectPropertiesRequest().WithDisabled(true)))

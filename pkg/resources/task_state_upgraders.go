@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 func v098TaskStateUpgrader(ctx context.Context, rawState map[string]any, meta any) (map[string]any, error) {

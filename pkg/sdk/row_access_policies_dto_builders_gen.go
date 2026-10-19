@@ -2,7 +2,7 @@
 
 package sdk
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/datatypes"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/datatypes"
 
 func NewCreateRowAccessPolicyRequest(
 	name SchemaObjectIdentifier,

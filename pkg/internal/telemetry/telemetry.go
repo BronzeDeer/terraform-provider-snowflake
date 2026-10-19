@@ -5,8 +5,8 @@ import (
 	"log"
 	"maps"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/internal/tracking"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/internal/tracking"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/go-uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 )

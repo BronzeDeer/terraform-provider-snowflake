@@ -3,7 +3,7 @@ package helpers
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 // UserWorkloadIdentityAuthenticationMethodsObjectIdentifier is a identifier for a user workload identity authentication method.

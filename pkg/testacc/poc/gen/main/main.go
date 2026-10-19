@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testacc/poc/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testacc/poc/gen"
 )
 
 const (
@@ -17,7 +17,7 @@ func main() {
 		genhelpers.NewPreambleModel(name, version).
 			WithImport("github.com/hashicorp/terraform-plugin-framework/provider/schema").
 			WithImport("github.com/hashicorp/terraform-plugin-framework/types").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider"),
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider"),
 		getSdkV2ProviderSchemas,
 		gen.ModelFromSdkV2Schema,
 		getFilename,

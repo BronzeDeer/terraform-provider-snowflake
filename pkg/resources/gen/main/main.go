@@ -5,8 +5,8 @@ package main
 import (
 	"text/template"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources/gen"
 )
 
 const (
@@ -19,9 +19,9 @@ func main() {
 		genhelpers.NewPreambleModel(name, version).
 			WithImport("context").
 			WithImport("errors").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/schemas").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/schemas").
 			WithImport("github.com/hashicorp/terraform-plugin-sdk/v2/diag").
 			WithNamedImport("tfschema", "github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"),
 		gen.GetAllObjects,

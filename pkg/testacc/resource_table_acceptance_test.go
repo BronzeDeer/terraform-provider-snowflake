@@ -9,18 +9,18 @@ import (
 	"strconv"
 	"testing"
 
-	r "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
+	r "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
 	tfjson "github.com/hashicorp/terraform-json"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/providermodel"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/helpers/random"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/planchecks"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testdatatypes"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/datatypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/providermodel"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/helpers/random"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/planchecks"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testdatatypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/datatypes"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
@@ -1447,7 +1447,7 @@ func TestAcc_Table_MaskingPolicy(t *testing.T) {
 					resource.TestCheckResourceAttr("snowflake_table.test_table", "column.0.masking_policy", maskingPolicy1.ID().FullyQualifiedName()),
 				),
 			},
-			// this step proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/pull/2186
+			// this step proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pull/2186
 			{
 				Config: tableWithMaskingPolicy(tableId, maskingPolicy2.ID()),
 				Check: resource.ComposeTestCheckFunc(
@@ -1500,7 +1500,7 @@ resource "snowflake_table" "test_table" {
 `, tableId.DatabaseName(), tableId.SchemaName(), tableId.Name())
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2356 issue is fixed.
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2356 issue is fixed.
 func TestAcc_Table_DefaultDataRetentionTime(t *testing.T) {
 	database, databaseCleanup := testClient().Database.CreateDatabaseWithParametersSet(t)
 	t.Cleanup(databaseCleanup)
@@ -1624,7 +1624,7 @@ resource "snowflake_table" "test" {
 `, tableId.DatabaseName(), tableId.SchemaName(), tableId.Name(), dataRetentionTimeInDays)
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2356 issue is fixed.
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2356 issue is fixed.
 func TestAcc_Table_DefaultDataRetentionTime_SetOutsideOfTerraform(t *testing.T) {
 	database, databaseCleanup := testClient().Database.CreateDatabaseWithParametersSet(t)
 	t.Cleanup(databaseCleanup)
@@ -1680,7 +1680,7 @@ func TestAcc_Table_DefaultDataRetentionTime_SetOutsideOfTerraform(t *testing.T) 
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2356 issue is fixed.
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2356 issue is fixed.
 func TestAcc_Table_DefaultDataRetentionTimeSettingUnsetting(t *testing.T) {
 	database, databaseCleanup := testClient().Database.CreateDatabaseWithParametersSet(t)
 	t.Cleanup(databaseCleanup)
@@ -1790,7 +1790,7 @@ func checkDatabaseSchemaAndTableDataRetentionTime(id sdk.SchemaObjectIdentifier,
 	}
 }
 
-// proves issues https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2110 and https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2495
+// proves issues https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2110 and https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2495
 func TestAcc_Table_ClusterBy(t *testing.T) {
 	tableId := testClient().Ids.RandomSchemaObjectIdentifier()
 
@@ -1837,7 +1837,7 @@ resource "snowflake_table" "test_table" {
 }
 
 // TODO [SNOW-1348114]: do not trim the data type (e.g. NUMBER(38,0) -> NUMBER(36,0) diff is ignored); finish the test
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2588 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2588 is fixed
 func TestAcc_ColumnTypeChangeWithNonTextType(t *testing.T) {
 	t.Skipf("Will be fixed with tables redesign in SNOW-1348114")
 
@@ -1889,7 +1889,7 @@ resource "snowflake_table" "test_table" {
 `, tableId.DatabaseName(), tableId.SchemaName(), tableId.Name(), columnType)
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2733 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2733 is fixed
 func TestAcc_Table_gh2733(t *testing.T) {
 	tableId := testClient().Ids.RandomSchemaObjectIdentifier()
 

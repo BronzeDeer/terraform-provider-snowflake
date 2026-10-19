@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testenvs"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testenvs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/config"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
@@ -129,7 +129,7 @@ func TestAcc_ExternalTable_basic(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2310 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2310 is fixed
 func TestAcc_ExternalTable_CorrectDataTypes(t *testing.T) {
 	awsBucketURL, awsKeyId, awsSecretKey := getExternalTableTestEnvsOrSkipTest(t)
 
@@ -187,7 +187,7 @@ func TestAcc_ExternalTable_CorrectDataTypes(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2293 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2293 is fixed
 func TestAcc_ExternalTable_CanCreateWithPartitions(t *testing.T) {
 	awsBucketURL, awsKeyId, awsSecretKey := getExternalTableTestEnvsOrSkipTest(t)
 
@@ -246,7 +246,7 @@ func TestAcc_ExternalTable_CanCreateWithPartitions(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1564 is implemented
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1564 is implemented
 func TestAcc_ExternalTable_DeltaLake(t *testing.T) {
 	awsBucketURL, awsKeyId, awsSecretKey := getExternalTableTestEnvsOrSkipTest(t)
 

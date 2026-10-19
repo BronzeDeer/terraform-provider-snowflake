@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/providermodel"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/providermodel"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/config"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
@@ -347,7 +347,7 @@ func TestAcc_ExternalFunction_migrateFromVersion085_issue2694_previousValueRemov
 	})
 }
 
-// Proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2528.
+// Proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2528.
 // The problem originated from ShowById without IN clause. There was no IN clause in the docs at the time.
 // It was raised with the appropriate team in Snowflake.
 func TestAcc_ExternalFunction_issue2528(t *testing.T) {

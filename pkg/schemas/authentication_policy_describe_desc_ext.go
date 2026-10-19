@@ -4,7 +4,7 @@ import (
 	"log"
 	"slices"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 var AuthenticationPolicyNames = []string{

@@ -3,7 +3,7 @@ package genhelpers_test
 import (
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/tools/imports"
 )
@@ -49,7 +49,7 @@ func hello() {
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 func hello() {
@@ -72,13 +72,13 @@ func hello() {
 	fmt.Println(r)
 }
 `)
-		// the second one possible is "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+		// the second one possible is "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 		expected := `package somepackagename
 
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
 )
 
 func hello() {
@@ -96,7 +96,7 @@ func hello() {
 	t.Run("add ambiguous import - with explicit import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	r := resources.Database
@@ -108,7 +108,7 @@ func hello() {
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 )
 
 func hello() {
@@ -126,7 +126,7 @@ func hello() {
 	t.Run("add unused explicit import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	fmt.Println("not used")
@@ -150,7 +150,7 @@ func hello() {
 	t.Run("add explicit named import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import re "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import re "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	r := re.Database
@@ -162,7 +162,7 @@ func hello() {
 import (
 	"fmt"
 
-	re "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+	re "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 )
 
 func hello() {
@@ -217,7 +217,7 @@ func hello() {
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 func hello() {
@@ -240,13 +240,13 @@ func hello() {
 	fmt.Println(r)
 }
 `)
-		// the second one possible is "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+		// the second one possible is "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 		expected := `package somepackagename
 
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
 )
 
 func hello() {
@@ -264,7 +264,7 @@ func hello() {
 	t.Run("add ambiguous import - with explicit import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	r := resources.Database
@@ -276,7 +276,7 @@ func hello() {
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 )
 
 func hello() {
@@ -294,7 +294,7 @@ func hello() {
 	t.Run("add unused explicit import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	fmt.Println("not used")
@@ -318,7 +318,7 @@ func hello() {
 	t.Run("add explicit named import", func(t *testing.T) {
 		src := []byte(`package somepackagename
 
-import re "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+import re "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 
 func hello() {
 	r := re.Database
@@ -330,7 +330,7 @@ func hello() {
 import (
 	"fmt"
 
-	re "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
+	re "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
 )
 
 func hello() {

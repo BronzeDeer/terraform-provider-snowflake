@@ -10,10 +10,10 @@ import (
 	"strings"
 	"testing"
 
-	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/model"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	accconfig "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/model"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/config"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
@@ -574,7 +574,7 @@ func TestAcc_Execute_grantsComplex(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2491
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2491
 func TestAcc_Execute_queryResultsBug(t *testing.T) {
 	resourceName := "snowflake_execute.test"
 	resource.Test(t, resource.TestCase{
@@ -749,7 +749,7 @@ func testAccCheckDatabaseExistence(t *testing.T, id sdk.AccountObjectIdentifier,
 	}
 }
 
-// Result of https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/3334.
+// Result of https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/3334.
 func TestAcc_Execute_gh3334_allTimeouts(t *testing.T) {
 	resourceName := "snowflake_execute.test"
 	resource.Test(t, resource.TestCase{
@@ -777,7 +777,7 @@ func TestAcc_Execute_gh3334_allTimeouts(t *testing.T) {
 	})
 }
 
-// Result of https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/3334.
+// Result of https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/3334.
 func TestAcc_Execute_gh3334_longRunningCreate(t *testing.T) {
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: TestAccProtoV6ProviderFactories,

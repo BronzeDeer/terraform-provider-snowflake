@@ -3,7 +3,7 @@ package testacc
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 func shareConfigOneAccount(shareId sdk.AccountObjectIdentifier, comment string, account string) string {

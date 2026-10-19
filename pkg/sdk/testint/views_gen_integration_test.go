@@ -9,13 +9,13 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/internal/tracking"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/objectassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testdatatypes"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/snowflakeroles"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/internal/tracking"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/objectassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testdatatypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/snowflakeroles"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -159,7 +159,7 @@ func TestInt_Views(t *testing.T) {
 		assertView(t, view, request.GetName())
 	})
 
-	// source https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2085
+	// source https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2085
 	t.Run("create view: no table reference", func(t *testing.T) {
 		id := testClientHelper().Ids.RandomSchemaObjectIdentifier()
 		request := sdk.NewCreateViewRequest(id, "SELECT NULL AS TYPE")
@@ -645,7 +645,7 @@ func TestInt_Views(t *testing.T) {
 		assert.NotContains(t, returnedViews, *view2)
 	})
 
-	// proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2506
+	// proves issue https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2506
 	t.Run("show view by id: same name in different schemas", func(t *testing.T) {
 		// we assume that SF returns views alphabetically
 		schemaId := testClientHelper().Ids.RandomDatabaseObjectIdentifierWithPrefix("aaaa")

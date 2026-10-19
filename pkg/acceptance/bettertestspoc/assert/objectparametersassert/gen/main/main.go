@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/objectparametersassert/gen"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/objectparametersassert/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 const (
@@ -15,9 +15,9 @@ const (
 func main() {
 	genhelpers.NewGenerator(
 		genhelpers.NewPreambleModel(name, version).WithImport("testing").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/helpers").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"),
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/helpers").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"),
 		gen.GetAllSnowflakeObjectParameters,
 		gen.ModelFromSnowflakeObjectParameters,
 		getFilename,

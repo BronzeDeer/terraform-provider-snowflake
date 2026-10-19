@@ -3,7 +3,7 @@ package genrest
 import (
 	"context"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/genrest/resource_warehouse"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/genrest/resource_warehouse"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )

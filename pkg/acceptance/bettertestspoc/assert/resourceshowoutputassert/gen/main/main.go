@@ -5,8 +5,8 @@ package main
 import (
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/resourceshowoutputassert/gen"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/resourceshowoutputassert/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 const (
@@ -18,8 +18,8 @@ func main() {
 	genhelpers.NewGenerator(
 		genhelpers.NewPreambleModel(name, version).
 			WithImport("testing").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert").
-			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"),
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert").
+			WithImport("github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"),
 		gen.GetFilteredSdkObjectDetails,
 		gen.ModelFromSdkObjectDetails,
 		getFilename,

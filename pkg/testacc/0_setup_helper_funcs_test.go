@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/snowflakedb/gosnowflake/v2"
 )
 

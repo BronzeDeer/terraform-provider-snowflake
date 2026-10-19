@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 func v092ToWarehouseSize(s string) (sdk.WarehouseSize, error) {
@@ -40,9 +40,9 @@ func v092ToWarehouseSize(s string) (sdk.WarehouseSize, error) {
 
 // v092WarehouseSizeStateUpgrader is needed because:
 // - we are removing incorrect mapped values from sdk.ToWarehouseSize (like 2XLARGE, 3XLARGE, ...); result of:
-//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/pull/1873
-//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/pull/1946
-//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1889#issuecomment-1631149585
+//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pull/1873
+//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pull/1946
+//   - https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1889#issuecomment-1631149585
 //
 // - deprecated wait_for_provisioning attribute was removed
 // - clear the old resource monitor representation

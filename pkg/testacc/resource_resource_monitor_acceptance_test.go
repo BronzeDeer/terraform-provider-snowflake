@@ -8,18 +8,18 @@ import (
 	"testing"
 	"time"
 
-	r "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
+	r "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
 	configvariable "github.com/hashicorp/terraform-plugin-testing/config"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/resourceassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert/resourceshowoutputassert"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/model"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/config/providermodel"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/planchecks"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/resourceassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert/resourceshowoutputassert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/model"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/config/providermodel"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/planchecks"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/tfversion"
@@ -466,7 +466,7 @@ func TestAcc_ResourceMonitor_PartialUpdate(t *testing.T) {
 	})
 }
 
-// TestAcc_ResourceMonitor_issue2167 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/2167 issue.
+// TestAcc_ResourceMonitor_issue2167 proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/2167 issue.
 // Second step is purposely error, because tests TestAcc_ResourceMonitorUpdateNotifyUsers and TestAcc_ResourceMonitorNotifyUsers are still skipped.
 // It can be fixed with them.
 func TestAcc_ResourceMonitor_issue2167(t *testing.T) {
@@ -495,7 +495,7 @@ func TestAcc_ResourceMonitor_issue2167(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1990 is fixed
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1990 is fixed
 func TestAcc_ResourceMonitor_Issue1990_RemovingResourceMonitorOutsideOfTerraform(t *testing.T) {
 	id := testClient().Ids.RandomAccountObjectIdentifier()
 	configModel := model.ResourceMonitor("test", id.Name())
@@ -539,11 +539,11 @@ func TestAcc_ResourceMonitor_Issue1990_RemovingResourceMonitorOutsideOfTerraform
 }
 
 // proves
-// https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1821
-// https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1832
-// https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1624
-// https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1716
-// https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1754
+// https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1821
+// https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1832
+// https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1624
+// https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1716
+// https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1754
 // are fixed and errors are more meaningful for the user
 func TestAcc_ResourceMonitor_Issue_TimestampInfinitePlan(t *testing.T) {
 	id := testClient().Ids.RandomAccountObjectIdentifier()
@@ -607,7 +607,7 @@ func TestAcc_ResourceMonitor_Issue_TimestampInfinitePlan(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1500 is fixed and errors are more meaningful for the user
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1500 is fixed and errors are more meaningful for the user
 func TestAcc_ResourceMonitor_Issue1500_CreatingWithOnlyTriggers(t *testing.T) {
 	id := testClient().Ids.RandomAccountObjectIdentifier()
 	configModel := model.ResourceMonitor("test", id.Name()).
@@ -643,7 +643,7 @@ func TestAcc_ResourceMonitor_Issue1500_CreatingWithOnlyTriggers(t *testing.T) {
 	})
 }
 
-// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/issues/1500 is fixed and errors are more meaningful for the user
+// proves https://github.com/Snowflake-Labs/terraform-provider-snowflake/v2/issues/1500 is fixed and errors are more meaningful for the user
 func TestAcc_ResourceMonitor_Issue1500_AlteringWithOnlyTriggers(t *testing.T) {
 	id := testClient().Ids.RandomAccountObjectIdentifier()
 

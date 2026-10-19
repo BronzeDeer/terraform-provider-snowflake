@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
@@ -16,7 +16,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 
 	// for PoC using the imports from testfunctional package
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customtypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customtypes"
 )
 
 var _ resource.ResourceWithConfigure = &WarehouseRestApiPocResource{}

@@ -3,7 +3,7 @@ package gen
 import (
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 // FieldPair holds the pairing between a single db row struct field and the corresponding plain SDK struct field.
