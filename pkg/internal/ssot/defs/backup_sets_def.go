@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // backupPolicyStateEnum is backup_policy_state on SHOW and DESCRIBE.
 // The public pages do not list the values. The integration test sees these four.

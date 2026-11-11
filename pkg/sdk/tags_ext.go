@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
 )
 
 // TagOnConflictAllowedValuesSequence is the value returned by SHOW TAGS in the on_conflict column

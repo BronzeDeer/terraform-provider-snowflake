@@ -5,9 +5,9 @@ package defs
 import (
 	"fmt"
 
-	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
+	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
 )
 
 func init() {

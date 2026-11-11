@@ -3,7 +3,7 @@ package ssot
 import (
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 // ParameterLevel identifies a catalog consumer set used by ParameterDefsForLevel. It is not

@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/helpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/helpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -22,9 +22,9 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 
 	// for PoC using the imports from testfunctional package
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customplanmodifiers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customtypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customplanmodifiers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customtypes"
 )
 
 var _ resource.ResourceWithConfigure = &WarehouseResource{}

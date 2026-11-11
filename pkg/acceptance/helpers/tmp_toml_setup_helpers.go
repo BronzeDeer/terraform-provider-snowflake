@@ -4,8 +4,8 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/helpers/random"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/testfiles"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/helpers/random"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/testfiles"
 )
 
 // TODO [SNOW-1827324]: add TestClient ref to each specific client, so that we enhance specific client and not the base one

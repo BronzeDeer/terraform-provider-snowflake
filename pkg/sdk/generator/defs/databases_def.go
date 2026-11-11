@@ -3,12 +3,12 @@ package defs
 import (
 	"slices"
 
-	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
-	g "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
+	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
+	g "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/parameterdefs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/parameterdefs"
 )
 
 var databaseParameters = ParameterDefsForLevel(parameterdefs.ParameterLevelDatabase)

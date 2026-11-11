@@ -1,7 +1,7 @@
 package resourceassert
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 // HasFromDefinition asserts the whole `from` block for a connector created from a definition. The generator

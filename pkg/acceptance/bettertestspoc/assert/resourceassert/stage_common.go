@@ -1,6 +1,6 @@
 package resourceassert
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert"
 
 func stageApplyFileFormatFormatNameChecks(e *assert.ResourceAssert, expected string) {
 	e.ValueSet("file_format.#", "1")

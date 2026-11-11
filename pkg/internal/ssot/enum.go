@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 )
 
 // Enum defines an enum type with its name and values. For now, only string values are supported.

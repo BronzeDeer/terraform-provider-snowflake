@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
 )
 
 const (

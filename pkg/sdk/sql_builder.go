@@ -9,7 +9,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/datatypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/datatypes"
 )
 
 type modifierType string

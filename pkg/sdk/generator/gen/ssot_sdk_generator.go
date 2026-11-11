@@ -5,10 +5,10 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
-	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
+	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
 )
 
 // parametersForLevel is the catalog a Parameters entry spreads. Tests replace it with a short list.

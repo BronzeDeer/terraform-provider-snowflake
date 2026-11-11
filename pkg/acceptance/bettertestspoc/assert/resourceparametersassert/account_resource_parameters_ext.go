@@ -1,8 +1,8 @@
 package resourceparametersassert
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
 )
 
 // parametersAbsentFromShow lists catalog parameters that SHOW PARAMETERS IN ACCOUNT does not return.

@@ -5,7 +5,7 @@ package testint
 import (
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 // Snowflake Intelligence is an account-level object. The ALL grant cases create one,

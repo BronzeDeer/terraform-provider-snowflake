@@ -1,7 +1,7 @@
 package resourceassert
 
 import (
-	r "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/resources"
+	r "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/resources"
 )
 
 func (w *WarehouseResourceAssert) HasDefaultMaxConcurrencyLevel() *WarehouseResourceAssert {

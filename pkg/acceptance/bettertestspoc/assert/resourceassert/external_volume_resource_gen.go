@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/acceptance/bettertestspoc/assert"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/acceptance/bettertestspoc/assert"
 )
 
 type ExternalVolumeResourceAssert struct {

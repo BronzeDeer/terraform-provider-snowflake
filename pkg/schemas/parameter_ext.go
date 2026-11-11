@@ -1,9 +1,9 @@
 package schemas
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/experimentalfeatures"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/experimentalfeatures"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 // ParameterToSchemaReducedOutput limits the `parameters` output only to the value and level values.

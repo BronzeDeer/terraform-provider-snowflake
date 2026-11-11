@@ -1,10 +1,10 @@
 package defs
 
 import (
-	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
-	g "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/parameterdefs"
+	ssotdefs "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
+	g "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/parameterdefs"
 )
 
 const parametersDoc = "https://docs.snowflake.com/en/sql-reference/sql/show-parameters"

@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // TableClusteringAction is the ALTER TABLE clustering clause: exactly one of CLUSTER BY, RECLUSTER, a recluster state
 // change, and DROP CLUSTERING KEY. The block is a plain object clause. The SDK definition builds this query struct, and

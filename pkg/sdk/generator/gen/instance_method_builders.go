@@ -1,6 +1,6 @@
 package gen
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/genhelpers"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/genhelpers"
 
 // NewInstanceMethodCallStruct creates a QueryStruct for a Snowflake instance method invocation.
 // The identifier field kind is set to "<will be replaced>" so that InstanceMethodOperation

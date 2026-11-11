@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 )
 
 // v2_23_0_ShareStateUpgrader migrates the state of the share:

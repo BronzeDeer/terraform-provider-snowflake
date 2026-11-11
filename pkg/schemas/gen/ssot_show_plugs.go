@@ -1,8 +1,8 @@
 package gen
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
 )
 
 func ssotShowResultSchemaDetails() []ShowResultSchemaDetails {

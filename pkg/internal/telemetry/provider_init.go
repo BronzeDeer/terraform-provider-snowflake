@@ -4,8 +4,8 @@ import (
 	"context"
 	"runtime"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
-	internalprovider "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/provider"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
+	internalprovider "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/provider"
 )
 
 func EmitProviderInit(ctx context.Context, providerCtx *internalprovider.Context) {

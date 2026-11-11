@@ -1,6 +1,6 @@
 package parameterdefs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 type (
 	ParameterDef   = ssot.ParameterDef

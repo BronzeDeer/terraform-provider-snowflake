@@ -1,6 +1,6 @@
 package resourceshowoutputassert
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 
 func (d *DatabaseShowOutputAssert) HasCreatedOnNotEmpty() *DatabaseShowOutputAssert {
 	d.ValuePresent("created_on")

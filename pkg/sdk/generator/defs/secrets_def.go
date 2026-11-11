@@ -3,9 +3,9 @@ package defs
 import (
 	"fmt"
 
-	g "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
+	g "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
 )
 
 var secretPairs = g.StructPair("secretDBRow", "Secret").

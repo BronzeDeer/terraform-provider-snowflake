@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/oswrapper"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/oswrapper"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )

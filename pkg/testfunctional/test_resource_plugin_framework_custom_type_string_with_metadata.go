@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/common"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customtypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/common"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customtypes"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"

@@ -3,7 +3,7 @@ package model
 import (
 	tfconfig "github.com/hashicorp/terraform-plugin-testing/config"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/collections"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/collections"
 )
 
 func (p *PostgresMirrorModel) WithPostgresTables(tables ...string) *PostgresMirrorModel {

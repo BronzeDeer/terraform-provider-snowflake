@@ -3,7 +3,7 @@ package gen
 import (
 	"fmt"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 )
 
 // UpdateCall is one helper call inside ApplySetUnset.

@@ -1,6 +1,6 @@
 package schemas
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
 
 func DatabaseDetailsListToSchema(details *sdk.DatabaseDetails) []map[string]any {
 	result := make([]map[string]any, len(details.Rows))

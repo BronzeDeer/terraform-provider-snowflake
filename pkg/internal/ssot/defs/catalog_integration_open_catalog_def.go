@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // CatalogIntegrationOpenCatalogAttrs holds reusable Open Catalog integration fields so SHOW
 // and DESCRIBE Columns can point at the same definitions instead of restating names.

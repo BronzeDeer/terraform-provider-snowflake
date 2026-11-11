@@ -32,7 +32,7 @@ This creates objects from `objects_def.tf` and generates `objects.csv` via `data
 ### Step 4: Run migration script (output to import directory)
 
 ```bash
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@dev \
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@dev \
   -import=statement grants < objects.csv > import/main.tf
 ```
 

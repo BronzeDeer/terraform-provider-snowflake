@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // WarehouseTypeUserSettable excludes ADAPTIVE and INTERACTIVE. Those types are separate resources.
 // SdkType is WarehouseType: sdk.ToWarehouseTypeUserSettable returns that type.

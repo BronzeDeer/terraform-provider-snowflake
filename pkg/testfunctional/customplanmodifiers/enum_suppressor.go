@@ -3,7 +3,7 @@ package customplanmodifiers
 import (
 	"context"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customtypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customtypes"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 )
 

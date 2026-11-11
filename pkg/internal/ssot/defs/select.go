@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // SelectObjects returns, in All order, the objects a generator takes as input. An object is selected when the generator's
 // flag is on (enabled) and the generator's own filter accepts it (selects). The filter is one rule per generator, so an

@@ -3,8 +3,8 @@
 package testfunctional
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/testfunctional/customtypes"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/testfunctional/customtypes"
 )
 
 func StringEnumAttributeCreate[T customtypes.EnumCreator[T]](attr customtypes.EnumValue[T], createField **T) error {

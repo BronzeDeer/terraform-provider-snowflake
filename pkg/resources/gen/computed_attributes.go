@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strconv"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 )
 
 // showComputedAttributes returns the computed attributes that are SHOW columns, in ComputedAttributes order.

@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // WarehouseInteractiveAttrs holds interactive warehouse fields.
 // None of WarehouseAttrs match: every description says "interactive warehouse", auto_suspend

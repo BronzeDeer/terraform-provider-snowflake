@@ -1,7 +1,7 @@
 package gen
 
 import (
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 )
 
 // ParameterHookModel is one catalog parameter as the parameter hook templates see it.

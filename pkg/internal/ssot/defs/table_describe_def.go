@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // Describe and select methods stay custom operations. SdkDescribe is one DESCRIBE per object.
 // CREATE AS SELECT, CREATE USING TEMPLATE, CREATE LIKE, and CREATE CLONE stay handwritten,

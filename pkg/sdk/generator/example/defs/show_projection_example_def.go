@@ -1,8 +1,8 @@
 package defs
 
 import (
-	g "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen"
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/generator/gen/sdkcommons"
+	g "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/generator/gen/sdkcommons"
 )
 
 // ShowProjectionExampleMini is the subset struct. ShowProjection emits the method only, so the struct is a describe helper.

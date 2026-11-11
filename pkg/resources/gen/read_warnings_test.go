@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot/defs"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot/defs"
 	"github.com/stretchr/testify/require"
 )
 

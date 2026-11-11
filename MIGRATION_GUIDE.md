@@ -1698,8 +1698,8 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x2 addr=0x0 pc=0x1050294dc]
 
 goroutine 286 [running]:
-github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/datatypes.(*TableDataType).ToLegacyDataTypeSql(0x5454dccfaae0?)
-github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/datatypes/table.go:42 +0x1c
+github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/datatypes.(*TableDataType).ToLegacyDataTypeSql(0x5454dccfaae0?)
+github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/datatypes/table.go:42 +0x1c
 ```
 
 This has been fixed: the provider now correctly parses and serializes the abbreviated `TABLE(<type>)` signature in function identifiers.
@@ -3193,8 +3193,8 @@ The `snowflake_view` resource could panic with `index out of range` during plan,
 panic: runtime error: index out of range [276] with length 276
 
 goroutine 149 [running]:
-github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/snowflake.(*ViewSelectStatementExtractor).consumeToken(0x1400077c818, {0x103fb7629, 0x11})
-	github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/snowflake/parser.go:242 +0x150
+github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/snowflake.(*ViewSelectStatementExtractor).consumeToken(0x1400077c818, {0x103fb7629, 0x11})
+	github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/snowflake/parser.go:242 +0x150
 ...
 ```
 
@@ -3902,8 +3902,8 @@ Stack trace from the terraform-provider-snowflake_v2.8.0 plugin:
 panic: runtime error: index out of range [1] with length 1
 
 goroutine 142 [running]:
-github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk.ParseSchemaObjectIdentifierWithArguments({0x14000ff3a40, 0x28})
-github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/sdk/identifier_parsers.go:164 +0x2bc
+github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk.ParseSchemaObjectIdentifierWithArguments({0x14000ff3a40, 0x28})
+github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/sdk/identifier_parsers.go:164 +0x2bc
 ```
 This could happen when e.g. the passed identifier was using the old pipe-separated format.
 

@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // Aliases are accepted by the SDK converter. The adaptive description lists canonical values
 // because IncludeAliasedInTheDescription is unset.

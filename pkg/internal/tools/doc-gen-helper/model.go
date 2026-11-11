@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/provider/experimentalfeatures"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/provider/experimentalfeatures"
 
 type DeprecatedResourcesContext struct {
 	Resources []DeprecatedResource

@@ -67,7 +67,7 @@ The behaviour between [import blocks](https://developer.hashicorp.com/terraform/
 Use the following syntax to run the migration script from your terminal:
 
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main [flags] [OBJECT_TYPE] < [INPUT] > [OUTPUT]
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main [flags] [OBJECT_TYPE] < [INPUT] > [OUTPUT]
 ```
 
 > **Note**: It's recommended to use the latest version of the script by specifying `@main` at the end of the script path.
@@ -251,19 +251,19 @@ The file contents should look similar to this:
 To use the script with the saved output, run the following command in the terminal:
 
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -import=block grants < ./example.csv
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -import=block grants < ./example.csv
 ```
 
 > For more details on the command-line options, run:
 > ```shell
-> go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -h
+> go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -h
 > ```
 
 The script will read the input from the standard input (stdin) and generate the corresponding Terraform resources and import statements as import blocks.
 The output is directed to the standard output (stdout), which can be redirected to a file if needed, by running:
 
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -import=block grants < ./example.csv > ./output.tf
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -import=block grants < ./example.csv > ./output.tf
 ```
 
 > **It's user's responsibility to ensure that the output is written securely to a safe location and not to overwrite any important files.**
@@ -479,19 +479,19 @@ The file contents should look similar to this:
 To use the script with the saved output, run the following command in the terminal:
 
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -import=block grants < ./example.csv
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -import=block grants < ./example.csv
 ```
 
 > For more details on the command-line options, run:
 > ```shell
-> go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -h
+> go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -h
 > ```
 
 The script will read the input from the standard input (stdin) and generate the corresponding Terraform resources and import statements as import blocks.
 The output is directed to the standard output (stdout), which can be redirected to a file if needed, by running:
 
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -import=block grants < ./example.csv > ./output.tf
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -import=block grants < ./example.csv > ./output.tf
 ```
 
 > **It's user's responsibility to ensure that the output is written securely to a safe location and not to overwrite any important files.**
@@ -733,7 +733,7 @@ output "schemas_found" {
 
 After running `terraform apply`, the CSV file will be automatically generated at `objects.csv`. Now, we can run the migration script like:
 ```shell
-go run github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/scripts/migration_script@main -import=block schemas < ./objects.csv
+go run github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/scripts/migration_script@main -import=block schemas < ./objects.csv
 ```
 
 This will output the generated configuration and import blocks for the specified schemas.

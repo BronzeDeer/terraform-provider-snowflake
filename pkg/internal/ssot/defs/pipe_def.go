@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 // pipeRefresh is the ALTER REFRESH block. Its children are the PREFIX and MODIFIED_AFTER parameters.
 var pipeRefresh = ssot.Attribute{

@@ -1,6 +1,6 @@
 package defs
 
-import "github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/ssot"
+import "github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/ssot"
 
 var CatalogIntegrationCatalogSourceType = ssot.NewEnum(
 	"CatalogIntegrationCatalogSourceType", "CatalogIntegrationCatalogSourceTypes",

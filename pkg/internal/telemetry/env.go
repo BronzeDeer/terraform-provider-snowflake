@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Snowflake-Labs/terraform-provider-snowflake/pkg/internal/oswrapper"
+	"github.com/Snowflake-Labs/terraform-provider-snowflake/v2/pkg/internal/oswrapper"
 )
 
 type envLookup func(name string) (string, bool)
